@@ -1,0 +1,4 @@
+git clone https://github.com/ChaosCombustionCo/ecu-tuning-platform.git
+cd ecu-tuning-platform/backend
+npm install
+node server.js
