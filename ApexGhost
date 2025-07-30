@@ -35,3 +35,4 @@ cd your-repo/backendied ${mode} successfully` });
 module.exports = router;const ecuRoutes = require('./routes/ecu');
 app.use('/ecu', ecuRoutes);git clone https://github.com/your-username/your-repo.git
 cd your-repo/backend
+cmd end
