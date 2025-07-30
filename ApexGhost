@@ -2,3 +2,36 @@ git clone https://github.com/ChaosCombustionCo/ecu-tuning-platform.git
 cd ecu-tuning-platform/backend
 npm install
 node server. js
+pkg install git -y
+git clone https://github.com/YOUR-REPO-HERE
+cd ecu_tuning_platform/backend
+node server.jsconst express = require('express');
+const router = express.Router();
+const { exec } = require('child_process');
+
+// Simulated data (replace with real serial calls later)
+router.get('/live-data', async (req, res) => {
+  exec('bash ./serial_stub/read_serial.sh', (err, stdout) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to read ECU data' });
+    }
+    try {
+      const data = JSON.parse(stdout);
+      res.json(data);
+    } catch {
+      res.status(500).json({ error: 'Invalid ECU data format' });
+    }
+  });
+});
+
+router.post('/apply-tune', (req, res) => {
+  const { mode } = req.body;
+  console.log(`🔧 Applying Tune: ${mode}`);
+  // Replace with real ECU write logic here
+  res.json({ status: `Applgit clone https://github.com/your-username/your-repo.git
+cd your-repo/backendied ${mode} successfully` });
+});
+
+module.exports = router;const ecuRoutes = require('./routes/ecu');
+app.use('/ecu', ecuRoutes);git clone https://github.com/your-username/your-repo.git
+cd your-repo/backend
